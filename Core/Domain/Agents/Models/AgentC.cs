@@ -22,6 +22,7 @@
             var baseStairsFloorsList = new List<string>();
             var totalIterations = size - 1;
 
+            //Print first lines (before middle line)
             for(int i = 0; i < totalIterations; i++)
             {
                 var pounds = new String('#', size + (2 * i));
@@ -29,10 +30,14 @@
                 baseStairsFloorsList.Add($"{whiteSpaces}{pounds}{whiteSpaces}");
             }
 
+            //Claculate middleline, having in count that by each iteration required 2 pounds
+            //should be added
             var middleLine = new String('#', size + (2 * totalIterations));
 
             var stairs = String.Join("\n", baseStairsFloorsList);
             stairs += $"\n{middleLine}\n";
+
+            //Reverse initial collection for get inverse print pattern
             baseStairsFloorsList.Reverse();
             stairs += String.Join("\n", baseStairsFloorsList);
 

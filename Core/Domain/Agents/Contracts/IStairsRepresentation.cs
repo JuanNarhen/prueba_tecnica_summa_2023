@@ -1,4 +1,4 @@
-﻿namespace Core.Application.Contracts
+﻿namespace Core.Domain.Agents.Contracts
 {
     public interface IStairsRepresentation
     {

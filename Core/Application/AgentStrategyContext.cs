@@ -1,9 +1,8 @@
-﻿using Core.Application.Contracts;
-using Core.Domain.Agents.Constants;
+﻿using Core.Domain.Agents.Constants;
 using Core.Domain.Agents.Contracts;
 using Core.Domain.Agents.Models;
 
-namespace Core.Application.Implementations
+namespace Core.Application
 {
     public class AgentStrategyContext : IMathMedia, IStairsRepresentation
     {
@@ -11,7 +10,7 @@ namespace Core.Application.Implementations
 
         public void SetStrategy(AgentType agentType)
         {
-            switch(agentType)
+            switch (agentType)
             {
                 case AgentType.AgentA:
                     _agent = new AgentA();
@@ -29,7 +28,7 @@ namespace Core.Application.Implementations
 
         public double GetMedia(List<double> numbers)
         {
-            if(_agent != null)
+            if (_agent != null)
             {
                 return _agent.GetMedia(numbers);
             }
@@ -39,7 +38,7 @@ namespace Core.Application.Implementations
 
         public string GetStaircase(int size)
         {
-            if(_agent != null)
+            if (_agent != null)
             {
                 return _agent.GetStaircase(size);
             }
