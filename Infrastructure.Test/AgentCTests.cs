@@ -1,4 +1,4 @@
-using Core.Application.Implementations;
+using Core.Application;
 using Core.Domain.Agents.Constants;
 
 namespace Infrastructure.Test
